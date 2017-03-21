@@ -17,7 +17,7 @@ Timber::$dirname = array('templates', 'views');
 class StarterSite extends TimberSite {
 
 	function __construct() {
-  add_action( 'wp_enqueue_scripts', array( $this, 'st_styles' ) );
+  		add_action( 'wp_enqueue_scripts', array( $this, 'st_styles' ) );
 		add_theme_support( 'post-formats' );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'menus' );
@@ -37,11 +37,10 @@ class StarterSite extends TimberSite {
 	}
 
  function st_styles() {
-   wp_enqueue_style( 'st-style', get_stylesheet_directory_uri() . '/assets/build/css/starter-theme.css', array(), '1.1', 'all');
-   wp_enqueue_style( 'st-style-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700', array(), '1.1', 'all');
-  }
-  wp_enqueue_script( 'st-libs-scripts', get_stylesheet_directory_uri() . '/assets/build/js/starter-theme-libs.js', array(), '1', true );
-  wp_enqueue_script( 'st-scripts', get_stylesheet_directory_uri() . '/assets/build/js/starter-theme.js', array(), '1', true );
+	wp_enqueue_style( 'st-style', get_stylesheet_directory_uri() . '/assets/build/css/starter-theme.css', array(), '1.1', 'all');
+	wp_enqueue_style( 'st-style-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700', array(), '1.1', 'all');
+	wp_enqueue_script( 'st-libs-scripts', get_stylesheet_directory_uri() . '/assets/build/js/starter-theme-libs.js', array(), '1', true );
+	wp_enqueue_script( 'st-scripts', get_stylesheet_directory_uri() . '/assets/build/js/starter-theme.js', array(), '1', true );
  }
 
 
